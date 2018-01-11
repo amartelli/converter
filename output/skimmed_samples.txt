@@ -1,0 +1,13 @@
+[config-begin]
+	Outputdir  = set_new_output_directory
+	Outputfile = outputfile.root
+	Lumi = 3000
+	Maxchilds = 6
+	Samplesdir = output/
+[config-end]
+
+[inputfiles-begin]
+sample0_ntuple.root, sample, 630, 23, 10000,1, true 
+[inputfiles-end]
+sample0_ntuple.root, sample, 630, 23, 10000,1, true 
+[inputfiles-end]
