@@ -21,8 +21,34 @@ public:
 
 private:
 	void analyze(size_t id);
+	void postProcess(){}
 
-	void postProcess();
+	/////USER FUNCTIONS
+    void initJetBranches(TTree* );
+	void initTrackBranches(TTree* );
+
+    bool fillJetBranches(const Jet*);
+    bool fillTrackBranches(const std::vector<Track*>& ,const Jet* );
+
+
+
+    /////data///////
+
+    ///jet branches
+    float jet_pt_;
+    float jet_eta_;
+
+    int isB_;
+    int isC_;
+    int isUDSG_;
+
+    ///track branches
+    std::vector<float> track_pt_;
+    std::vector<float> track_releta_;
+    std::vector<float> track_sip3D_;
+    std::vector<float> track_sip2D_;
+
+
 };
 
 
