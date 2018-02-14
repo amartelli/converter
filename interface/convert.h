@@ -41,6 +41,7 @@ private:
     int isB_;
     int isC_;
     int isUDSG_;
+    int isMC_,isTtbar_;
 
     ///track branches
     std::vector<float> track_pt_;

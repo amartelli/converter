@@ -24,10 +24,8 @@ $
     
     Testmode   = false
 
-    
     Maxchilds  = 6
 
-    
     Samplesdir = /afs/cern.ch/user/a/amartell/public/Delphes/
  
     RunOnOutputOnly = false
@@ -38,7 +36,11 @@ $
 
 [inputfiles-begin]
 
-delphes_HLLHCwithSmearing_PFJ_10k.root  , sample,       630, 23, auto, 1, true
+$ keep the names!!
 
+delphes_HLLHCwithSmearing_PFJ_10k.root  , ttbar_MC,     630, 23, auto, 1 
+delphes_HLLHCwithSmearing_PFJ_10k.root  , ttbar_data,	424, 22, auto, 1 
+delphes_HLLHCwithSmearing_PFJ_10k.root  , qcd_MC,	    433, 21, auto, 1 
+delphes_HLLHCwithSmearing_PFJ_10k.root  , qcd_data,	    432, 20, auto, 1 
 
 [inputfiles-end]

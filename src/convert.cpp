@@ -9,6 +9,14 @@
 #include "TDirectory.h"
 
 
+float catchNan(const float& in){
+
+if(in!=in) return 0;
+return in;
+
+}
+
+
 void convert::analyze(size_t childid /* this info can be used for printouts */){
 
 
@@ -21,6 +29,14 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
     //read the tracks - needed
     d_ana::dBranchHandler<Track>       tracks(tree(),"EFlowTrack",true);
 
+    const TString& samplename=getLegendName();
+    isTtbar_=0;
+    isMC_=0;
+    if(samplename.Contains("ttbar"))
+    	isTtbar_=1;
+    if(samplename.Contains("MC"))
+    	isMC_=1;
+
 
     TTree* myskim=addTree("tree");
     /*
@@ -28,11 +44,6 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
      */
     initJetBranches(myskim);
     initTrackBranches(myskim);
-
-
-
-
-
 
 
     size_t nevents=tree()->entries();
@@ -94,6 +105,8 @@ void convert::initJetBranches(TTree* myskim){
     myskim->Branch("isB", &isB_);
     myskim->Branch("isC", &isC_);
     myskim->Branch("isUDSG", &isUDSG_);
+    myskim->Branch("isMC", &isMC_);
+    myskim->Branch("isTtbar", &isTtbar_);
 
 }
 
@@ -166,8 +179,8 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
 
         track_pt_.push_back(track->PT);
         track_releta_.push_back(track->Eta-jet->Eta);
-        track_sip3D_.push_back(sip3D);
-        track_sip2D_.push_back(sip2D);
+        track_sip3D_.push_back(catchNan(sip3D));
+        track_sip2D_.push_back(catchNan(sip2D));
     }
 
     return true;
