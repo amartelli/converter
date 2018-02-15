@@ -22,7 +22,7 @@ $
     
     Lumi       = 3000
     
-    Testmode   = false
+    Testmode   = true
 
     Maxchilds  = 6
 
