@@ -41,13 +41,17 @@ private:
     int isB_;
     int isC_;
     int isUDSG_;
+    int isMC_;
+    int isTtbar_;
 
     ///track branches
     std::vector<float> track_pt_;
+    std::vector<float> track_eta_;
     std::vector<float> track_releta_;
     std::vector<float> track_sip3D_;
     std::vector<float> track_sip2D_;
-
+    std::vector<float> track_ptRel_;
+    std::vector<float> track_pPar_;
 
 };
 
