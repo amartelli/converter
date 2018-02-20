@@ -62,35 +62,38 @@ private:
     int isB_;
     int isC_;
     int isUDSG_;
-    int isMC_,isTtbar_;
+    int isMC_;
+    int isTtbar_;
 
     ///track branches
     std::vector<float> track_pt_;
+    std::vector<float> track_eta_;
     std::vector<float> track_releta_;
     std::vector<float> track_sip3D_;
     std::vector<float> track_sip2D_;
+    std::vector<float> track_ptRel_;
+    std::vector<float> track_pPar_;
 
     std::vector<TString> allbranches_;
 
     bool read_;
-};
 
+};
 
 template <class T>
 void convert::addBranch(TTree* t, const char* name,  T* address, const char* leaflist){
 
-    if(read_ ){
-        t->SetBranchAddress(name,address);
-    }
-    else{
-        if(leaflist)
-            t->Branch(name  ,address  ,leaflist );
-        else
-            t->Branch(name  ,address);
-    }
-    allbranches_.push_back((TString)name);
+  if(read_ ){
+    t->SetBranchAddress(name,address);
+  }
+  else{
+    if(leaflist)
+      t->Branch(name  ,address  ,leaflist );
+    else
+      t->Branch(name  ,address);
+  }
+  allbranches_.push_back((TString)name);
 
 }
-
 
 #endif /* convert_H_ */
