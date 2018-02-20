@@ -1,0 +1,93 @@
+
+$ This is a test configuration for the DAnalysis analyser/skimmer
+$ Comments can be added following a "$"
+$
+$ The first part described the general configuration of the analyser
+$ The output directory will be created in the directory the analyser is
+$ run from
+$ The output file will be created within the output directory and will
+$ contain any histogram that was initialised (see skelton analyser sourcecode)
+$ It is also possible to create a flat ntuple or a skim. In this case,
+$ each sample will result in a unique output file containing the ntuple or skim.
+$ In addition, a new configuration file (like this) will be created that allows 
+$ to run over the new skim/ntuple with the DAnalysis framework, too, taking
+$ care of proper normalisation etc.
+$
+
+
+[config-begin]
+
+    Outputdir  = plotsTTB_v3
+    Outputfile = plotsTTB_v3.root
+    $Outputdir  = plotsQCD
+    $Outputfile = plotsQCD.root
+    $Outputdir  = plotsTTB_v1
+    $Outputfile = plotsTTB_v1.root	
+    $Outputdir  = plotsQCD_v2
+    $Outputfile = plotsQCD_v2.root	
+
+    Lumi       = 3000
+    
+    Testmode   = false
+
+    Maxchilds  = 6
+
+    
+    $Samplesdir = /afs/cern.ch/user/a/amartell/public/Delphes/
+    $Samplesdir = /tmp/amartell/Delphe/
+    Samplesdir = /eos/cms/store/user/amartell/Pheno/
+ 
+    RunOnOutputOnly = false
+
+[config-end]
+
+
+
+[inputfiles-begin]
+
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_1.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_10.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_2.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_3.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_4.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_5.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_6.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_7.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_8.root,    sample,    630, 23, auto, 1, true
+$Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_9.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_10.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    sample,    630, 23, auto, 1, true
+$Delphes_TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    sample,    630, 23, auto, 1, true
+
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    sample,    630, 23, auto, 1, true
+TTB_v3/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    sample,    630, 23, auto, 1, true
+
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    sample,    630, 23, auto, 1, true
+$QCD_v2/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    sample,    630, 23, auto, 1, true
+
+
+
+[inputfiles-end]
