@@ -9,7 +9,6 @@
 #include "TDirectory.h"
 
 
-
 float ptRel(const TVector3 &dir, const TVector3 &track)
 {
   float magnitute = track.Perp(dir.Unit());
@@ -50,6 +49,13 @@ std::vector<size_t> sorted_indices(const std::vector<float> &v) {
 }
 
 
+float catchNan(const float& in){
+
+if(in!=in) return 0;
+return in;
+}
+
+
 void convert::analyze(size_t childid /* this info can be used for printouts */){
 
 
@@ -61,6 +67,14 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
     d_ana::dBranchHandler<GenParticle> genpart(tree(),"Particle",false);
     //read the tracks - needed
     d_ana::dBranchHandler<Track>       tracks(tree(),"EFlowTrack",true);
+
+    const TString& samplename=getLegendName();
+    isTtbar_=0;
+    isMC_=0;
+    if(samplename.Contains("ttbar"))
+    	isTtbar_=1;
+    if(samplename.Contains("MC"))
+    	isMC_=1;
 
 
     const TString& samplename=getLegendName();
@@ -79,11 +93,6 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
      */
     initJetBranches(myskim);
     initTrackBranches(myskim);
-
-
-
-
-
 
 
     size_t nevents=tree()->entries();
@@ -132,6 +141,10 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
     processEndFunction();
 }
 
+void convert::initBranches(TTree* t){
+	initTrackBranches(t);
+	initJetBranches(t);
+}
 
 
 void convert::initJetBranches(TTree* myskim){
@@ -166,6 +179,7 @@ bool convert::fillJetBranches(const Jet* jet){
 
     return true;
 }
+
 
 ///////tracks
 
@@ -288,11 +302,9 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
       }
     }
 
+    // track_sip3D_.push_back(catchNan(sip3D));
+    // track_sip2D_.push_back(catchNan(sip2D));
 
-
-    
-    //std::cout << " >>> track size = << " << track_pt_.size() << std::endl;
-    
     return true;
 }
 

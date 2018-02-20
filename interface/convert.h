@@ -11,13 +11,31 @@
 #include "interface/basicAnalyzer.h"
 #include "interface/sampleCollection.h"
 #include "classes/DelphesClasses.h"
-
+#include "TTree.h"
 
 class convert: public d_ana::basicAnalyzer{
 public:
-	convert():d_ana::basicAnalyzer(){}
+	convert():d_ana::basicAnalyzer(),read_(false){}
 	~convert(){}
 
+	///////
+
+
+	std::vector<TString> getListOfBranches(){
+		if(allbranches_.size())
+			return allbranches_;
+		else{
+			TTree *t=new TTree();
+			initBranches(t);
+			return allbranches_;
+		}
+	}
+
+
+
+    void setIsRead(bool isread){read_=isread;}
+	void initBranches(TTree* );
+	///////
 
 private:
 	void analyze(size_t id);
@@ -30,6 +48,9 @@ private:
     bool fillJetBranches(const Jet*);
     bool fillTrackBranches(const std::vector<Track*>& ,const Jet* );
 
+
+    template <class T>
+    void addBranch(TTree* t, const char* name,  T*, const char* leaflist=0);
 
 
     /////data///////
@@ -54,9 +75,6 @@ private:
     std::vector<float> track_pPar_;
 
 };
-
-
-
 
 
 #endif /* convert_H_ */
