@@ -68,14 +68,6 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
     //read the tracks - needed
     d_ana::dBranchHandler<Track>       tracks(tree(),"EFlowTrack",true);
 
-    const TString& samplename=getLegendName();
-    isTtbar_=0;
-    isMC_=0;
-    if(samplename.Contains("ttbar"))
-    	isTtbar_=1;
-    if(samplename.Contains("MC"))
-    	isMC_=1;
-
 
     const TString& samplename=getLegendName();
     isTtbar_=0;
@@ -149,13 +141,13 @@ void convert::initBranches(TTree* t){
 
 void convert::initJetBranches(TTree* myskim){
 
-    myskim->Branch("jet_pt", &jet_pt_);
-    myskim->Branch("jet_eta", &jet_eta_);
-    myskim->Branch("isB", &isB_);
-    myskim->Branch("isC", &isC_);
-    myskim->Branch("isUDSG", &isUDSG_);
-    myskim->Branch("isMC", &isMC_);
-    myskim->Branch("isTtbar", &isTtbar_);
+   addBranch(myskim,"jet_pt", &jet_pt_);
+   addBranch(myskim,"jet_eta", &jet_eta_);
+   addBranch(myskim,"isB", &isB_);
+   addBranch(myskim,"isC", &isC_);
+   addBranch(myskim,"isUDSG", &isUDSG_);
+   addBranch(myskim,"isMC", &isMC_);
+   addBranch(myskim,"isTtbar", &isTtbar_);
 }
 
 bool convert::fillJetBranches(const Jet* jet){
@@ -185,13 +177,13 @@ bool convert::fillJetBranches(const Jet* jet){
 
 void convert::initTrackBranches(TTree* myskim){
 
-    myskim->Branch("track_pt", &track_pt_);
-    myskim->Branch("track_eta", &track_eta_);
-    myskim->Branch("track_releta", &track_releta_);
-    myskim->Branch("track_sip3D", &track_sip3D_);
-    myskim->Branch("track_sip2D", &track_sip2D_);
-    myskim->Branch("track_pPar",  &track_pPar_);
-    myskim->Branch("track_ptRel", &track_ptRel_);
+    addBranch(myskim,"track_pt", &track_pt_);
+    addBranch(myskim,"track_eta", &track_eta_);
+    addBranch(myskim,"track_releta", &track_releta_);
+    addBranch(myskim,"track_sip3D", &track_sip3D_);
+    addBranch(myskim,"track_sip2D", &track_sip2D_);
+    addBranch(myskim,"track_pPar", &track_pPar_);
+    addBranch(myskim,"track_ptRel", &track_ptRel_);
 }
 
 
@@ -266,13 +258,13 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
       */
       
 
-      S2.push_back(sip2D);
+      S2.push_back(catchNan(sip2D));
       ptS2.push_back(track->PT);
       etaS2.push_back(track->Eta);
       reletaS2.push_back(track->Eta-jet->Eta);
       ptRelS2.push_back(trkPttRel);
       pParS2.push_back(trkPPar);    
-      sip3DS2.push_back(sip3D);
+      sip3DS2.push_back(catchNan(sip3D));
     }
 
 
@@ -301,9 +293,6 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
 	track_pPar_.push_back(0.);
       }
     }
-
-    // track_sip3D_.push_back(catchNan(sip3D));
-    // track_sip2D_.push_back(catchNan(sip2D));
 
     return true;
 }

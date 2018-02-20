@@ -74,7 +74,26 @@ private:
     std::vector<float> track_ptRel_;
     std::vector<float> track_pPar_;
 
+    std::vector<TString> allbranches_;
+
+    bool read_;
+
 };
 
+template <class T>
+void convert::addBranch(TTree* t, const char* name,  T* address, const char* leaflist){
+
+  if(read_ ){
+    t->SetBranchAddress(name,address);
+  }
+  else{
+    if(leaflist)
+      t->Branch(name  ,address  ,leaflist );
+    else
+      t->Branch(name  ,address);
+  }
+  allbranches_.push_back((TString)name);
+
+}
 
 #endif /* convert_H_ */
