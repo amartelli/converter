@@ -96,17 +96,21 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
     processEndFunction();
 }
 
+void convert::initBranches(TTree* t){
+	initTrackBranches(t);
+	initJetBranches(t);
+}
 
 
 void convert::initJetBranches(TTree* myskim){
 
-    myskim->Branch("jet_pt", &jet_pt_);
-    myskim->Branch("jet_eta", &jet_eta_);
-    myskim->Branch("isB", &isB_);
-    myskim->Branch("isC", &isC_);
-    myskim->Branch("isUDSG", &isUDSG_);
-    myskim->Branch("isMC", &isMC_);
-    myskim->Branch("isTtbar", &isTtbar_);
+    addBranch(myskim,"jet_pt", &jet_pt_);
+    addBranch(myskim,"jet_eta", &jet_eta_);
+    addBranch(myskim,"isB", &isB_);
+    addBranch(myskim,"isC", &isC_);
+    addBranch(myskim,"isUDSG", &isUDSG_);
+    addBranch(myskim,"isMC", &isMC_);
+    addBranch(myskim,"isTtbar", &isTtbar_);
 
 }
 
@@ -132,14 +136,15 @@ bool convert::fillJetBranches(const Jet* jet){
     return true;
 }
 
+
 ///////tracks
 
 void convert::initTrackBranches(TTree* myskim){
 
-    myskim->Branch("track_pt", &track_pt_);
-    myskim->Branch("track_releta", &track_releta_);
-    myskim->Branch("track_sip3D", &track_sip3D_);
-    myskim->Branch("track_sip2D", &track_sip2D_);
+    addBranch(myskim,"track_pt", &track_pt_);
+    addBranch(myskim,"track_releta", &track_releta_);
+    addBranch(myskim,"track_sip3D", &track_sip3D_);
+    addBranch(myskim,"track_sip2D", &track_sip2D_);
 
 }
 
