@@ -148,12 +148,17 @@ void convert::initJetBranches(TTree* myskim){
    addBranch(myskim,"isUDSG", &isUDSG_);
    addBranch(myskim,"isMC", &isMC_);
    addBranch(myskim,"isTtbar", &isTtbar_);
+   addBranch(myskim,"sigmad0times", &sigmad0times_);
 }
 
 bool convert::fillJetBranches(const Jet* jet){
 
     jet_pt_=jet->PT;
     jet_eta_=jet->Eta;
+
+    sigmad0times_ = 1.5;
+
+    if(std::abs(jet_eta_) > 2.) return false;
 
     isB_=0;
     isC_=0;
@@ -218,6 +223,7 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
     ptRelS2.clear();
     sip3DS2.clear();
 
+    if(tracks.size() == 0.) return false;
    
     for(const auto& track:tracks){
       
