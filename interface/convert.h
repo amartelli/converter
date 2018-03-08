@@ -64,6 +64,7 @@ private:
     int isUDSG_;
     int isMC_;
     int isTtbar_;
+    float sigmad0times_;
 
     ///track branches
     std::vector<float> track_pt_;

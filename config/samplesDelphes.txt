@@ -17,8 +17,8 @@ $
 
 [config-begin]
 
-    Outputdir  = outputQCDTTB_DAMC
-    Outputfile = outputfile_QCDTTB_DAMC.root
+    Outputdir  = outputQCDTTB_sd01p5_eta2Cut
+    Outputfile = outputfile_QCDTTB_sd01p5_eta2Cut.root
 
     Lumi       = 3000
     
@@ -79,48 +79,48 @@ QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_MC,    630, 23, auto, 1,
 QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
 
 
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5_test/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_data,    630, 23, auto, 1, true
 
 
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x5/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_data,    630, 23, auto, 1, true
+TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_data,    630, 23, auto, 1, true
+QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_data,    630, 23, auto, 1, true
 
 
 
