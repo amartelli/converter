@@ -64,9 +64,9 @@ void convert::analyze(size_t childid /* this info can be used for printouts */){
     d_ana::dBranchHandler<Jet>         jets(tree(),"Jet");
     //referenced by the jets
     //do not read gen if not needed - takes a lot of time for nothing
-    d_ana::dBranchHandler<GenParticle> genpart(tree(),"Particle",false);
+    d_ana::dBranchHandler<GenParticle> genpart(tree(),"Particle");
     //read the tracks - needed
-    d_ana::dBranchHandler<Track>       tracks(tree(),"EFlowTrack",true);
+    d_ana::dBranchHandler<Track>       tracks(tree(),"EFlowTrack", true);
 
 
     const TString& samplename=getLegendName();
@@ -147,6 +147,7 @@ void convert::initJetBranches(TTree* myskim){
    addBranch(myskim,"isC", &isC_);
    addBranch(myskim,"isUDSG", &isUDSG_);
    addBranch(myskim,"isMC", &isMC_);
+   addBranch(myskim,"nTrks", &nTrks_);
    addBranch(myskim,"isTtbar", &isTtbar_);
    addBranch(myskim,"sigmad0times", &sigmad0times_);
 }
@@ -156,20 +157,23 @@ bool convert::fillJetBranches(const Jet* jet){
     jet_pt_=jet->PT;
     jet_eta_=jet->Eta;
 
-    sigmad0times_ = 1.5;
+    sigmad0times_ = 1.;
 
-    if(std::abs(jet_eta_) > 2.) return false;
+    //    if(std::abs(jet_eta_) > 2.) return false;
 
-    isB_=0;
-    isC_=0;
-    isUDSG_=0;
+    isB_ = 0;
+    isC_ = 0;
+    isUDSG_ = 0;
 
-    if(jet->Flavor == 5)
-        isB_=1;
-    else if(jet->Flavor == 4)
-        isC_=1;
-    else if(jet->Flavor == 1 || jet->Flavor == 2 || jet->Flavor == 3 || jet->Flavor == 21)
-        isUDSG_=1;
+    if(jet->Flavor == 5){
+      isB_ = 1;
+    }
+    else if(jet->Flavor == 4){
+      isC_ = 1;
+    }
+    else if(jet->Flavor == 1 || jet->Flavor == 2 || jet->Flavor == 3 || jet->Flavor == 21){
+      isUDSG_ = 1;
+    }
     else
         return false; //undefined flavour
 
@@ -223,12 +227,15 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
     ptRelS2.clear();
     sip3DS2.clear();
 
-    if(tracks.size() == 0.) return false;
-   
+    nTrks_ = tracks.size();
+
+    //    if(tracks.size() == 0.) return false;
+    //if(tracks.size() == 0.) std::cout << " track size 0 " << std::endl;
+
     for(const auto& track:tracks){
       
       if(track->PT<1)continue;
-      if(track->Eta>2.5)continue;
+      if(std::abs(track->Eta>2.5))continue;
       float md0 = TMath::Abs(track->D0);
       float d0  = track->D0;
       float xd  = track->Xd;
@@ -277,7 +284,7 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
     std::vector<size_t> sortedIndex = sorted_indices(S2);
 
 
-    for(unsigned int ij=0; ij<15; ++ij){
+    for(unsigned int ij=0; ij<10; ++ij){
       if(ij < S2.size()){
 	int ijS = sortedIndex.at(ij);
 
@@ -288,7 +295,7 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
 	track_sip2D_.push_back(S2.at(ijS));
 	track_ptRel_.push_back(ptRelS2.at(ijS));
 	track_pPar_.push_back(pParS2.at(ijS));
-      }
+      }      
       else{
 	track_pt_.push_back(0.);
 	track_eta_.push_back(0.);
@@ -298,6 +305,7 @@ bool convert::fillTrackBranches(const std::vector<Track*>& tracks,const Jet* jet
 	track_ptRel_.push_back(0.);
 	track_pPar_.push_back(0.);
       }
+      
     }
 
     return true;

@@ -170,7 +170,7 @@ int main(int argc, char *argv[]){
        run this program with:\n merge <mergeDescripter file> <file index to be merged>";
 
     std::cout << "WARNING, please clean up the /tmp/ directory (delete any /tmp/mergeSamples_* files) if the program was killed or did not end successfully"<<std::endl;
-
+    system(("rm /tmp/mergeSamples_* "));
 
     if(argc<3 || argc>3){
         std::cout << helpmessage <<std::endl;

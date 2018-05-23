@@ -1,0 +1,94 @@
+
+$ This is a test configuration for the DAnalysis analyser/skimmer
+$ Comments can be added following a "$"
+$
+$ The first part described the general configuration of the analyser
+$ The output directory will be created in the directory the analyser is
+$ run from
+$ The output file will be created within the output directory and will
+$ contain any histogram that was initialised (see skelton analyser sourcecode)
+$ It is also possible to create a flat ntuple or a skim. In this case,
+$ each sample will result in a unique output file containing the ntuple or skim.
+$ In addition, a new configuration file (like this) will be created that allows 
+$ to run over the new skim/ntuple with the DAnalysis framework, too, taking
+$ care of proper normalisation etc.
+$
+
+
+[config-begin]
+
+    Outputdir  = plotsTTB
+    Outputfile = plotsTTB.root
+
+    Lumi       = 3000
+    
+    Testmode   = false
+
+    Maxchilds  = 6
+
+    
+    Samplesdir = /vols/cms/amartell/DelphesProduction/
+ 
+    RunOnOutputOnly = false
+
+[config-end]
+
+
+
+[inputfiles-begin]
+
+
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_0.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_10.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_11.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_12.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_13.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_14.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_15.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_16.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_17.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_18.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_19.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_1.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_20.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_21.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_22.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_23.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_24.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_25.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_26.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_27.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_28.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_29.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_2.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_30.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_31.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_32.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_33.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_34.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_35.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_36.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_37.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_38.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_39.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_3.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_40.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_41.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_42.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_43.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_44.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_45.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_46.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_47.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_48.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_49.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_4.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_5.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_6.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_7.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_8.root,    samples,     630, 23, auto, 1, true
+TTBhad_v0/delphesCMS_TTBhad_v0_10k_9.root,    samples,     630, 23, auto, 1, true
+
+
+
+[inputfiles-end]

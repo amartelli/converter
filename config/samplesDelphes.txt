@@ -17,8 +17,8 @@ $
 
 [config-begin]
 
-    Outputdir  = outputQCDTTB_sd01p5_eta2Cut
-    Outputfile = outputfile_QCDTTB_sd01p5_eta2Cut.root
+    Outputdir  = outputQCD_MC
+    Outputfile = outputfile_QCD_MC.root
 
     Lumi       = 3000
     
@@ -26,7 +26,7 @@ $
     
     Maxchilds  = 6
 
-    Samplesdir = /eos/cms/store/user/amartell/Pheno/
+    Samplesdir = /vols/cms/amartell/DelphesProduction/
  
     RunOnOutputOnly = false
 
@@ -36,91 +36,141 @@ $
 
 [inputfiles-begin]
 
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_10.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_QCD_v0/delphes_HLLHCwithSmearing_PFJ_qcd_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_10.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_MC,    630, 23, auto, 1, true
-Delphes_TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_MC,    630, 23, auto, 1, true
 
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_MC,    630, 23, auto, 1, true
-TTB_v0/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
-QCD_v0/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
-
-
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_test/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_data,    630, 23, auto, 1, true
-
-
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    ttbar_data,    630, 23, auto, 1, true
-TTB_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    ttbar_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_0.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_1.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_2.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_3.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_4.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_5.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_6.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_7.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_8.root,    qcd_data,    630, 23, auto, 1, true
-QCD_vd0x1p5_train/delphes_HLLHCwithSmearing_PFJ_10k_9.root,    qcd_data,    630, 23, auto, 1, true
+QCD_100-120_v0/delphesCMS_QCD_100-120_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0/delphesCMS_QCD_100-120_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0/delphesCMS_QCD_100-120_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0/delphesCMS_QCD_100-120_v0_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0/delphesCMS_QCD_100-120_v0_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0/delphesCMS_QCD_100-120_v0_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0b/delphesCMS_QCD_100-120_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0b/delphesCMS_QCD_100-120_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0b/delphesCMS_QCD_100-120_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0b/delphesCMS_QCD_100-120_v0b_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0b/delphesCMS_QCD_100-120_v0b_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_100-120_v0b/delphesCMS_QCD_100-120_v0b_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0/delphesCMS_QCD_120-140_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0/delphesCMS_QCD_120-140_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0/delphesCMS_QCD_120-140_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0/delphesCMS_QCD_120-140_v0_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0/delphesCMS_QCD_120-140_v0_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0b/delphesCMS_QCD_120-140_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0b/delphesCMS_QCD_120-140_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0b/delphesCMS_QCD_120-140_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0b/delphesCMS_QCD_120-140_v0b_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_120-140_v0b/delphesCMS_QCD_120-140_v0b_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0/delphesCMS_QCD_140-160_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0/delphesCMS_QCD_140-160_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0/delphesCMS_QCD_140-160_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0/delphesCMS_QCD_140-160_v0_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0b/delphesCMS_QCD_140-160_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0b/delphesCMS_QCD_140-160_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0b/delphesCMS_QCD_140-160_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_140-160_v0b/delphesCMS_QCD_140-160_v0b_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_160-180_v0/delphesCMS_QCD_160-180_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_160-180_v0/delphesCMS_QCD_160-180_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_160-180_v0/delphesCMS_QCD_160-180_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_160-180_v0b/delphesCMS_QCD_160-180_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_160-180_v0b/delphesCMS_QCD_160-180_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_160-180_v0b/delphesCMS_QCD_160-180_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_180-200_v0/delphesCMS_QCD_180-200_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_180-200_v0/delphesCMS_QCD_180-200_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_180-200_v0b/delphesCMS_QCD_180-200_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_180-200_v0b/delphesCMS_QCD_180-200_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0b_10k_10.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0b_10k_11.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0b_10k_12.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0/delphesCMS_QCD_20-40_v0b_10k_13.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_10.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_11.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_12.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_13.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_20-40_v0b/delphesCMS_QCD_20-40_v0b_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_200min/delphesCMS_QCD_200min_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_200min/delphesCMS_QCD_200min_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0b_10k_10.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0b_10k_11.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0b_10k_12.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0/delphesCMS_QCD_40-60_v0b_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_10.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_11.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_12.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_40-60_v0b/delphesCMS_QCD_40-60_v0b_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_10.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_11.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0/delphesCMS_QCD_60-80_v0_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_10.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_11.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_7.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_8.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_60-80_v0b/delphesCMS_QCD_60-80_v0b_10k_9.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0/delphesCMS_QCD_80-100_v0_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0/delphesCMS_QCD_80-100_v0_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0/delphesCMS_QCD_80-100_v0_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0/delphesCMS_QCD_80-100_v0_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0/delphesCMS_QCD_80-100_v0_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0/delphesCMS_QCD_80-100_v0_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0/delphesCMS_QCD_80-100_v0_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0b/delphesCMS_QCD_80-100_v0b_10k_0.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0b/delphesCMS_QCD_80-100_v0b_10k_1.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0b/delphesCMS_QCD_80-100_v0b_10k_2.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0b/delphesCMS_QCD_80-100_v0b_10k_3.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0b/delphesCMS_QCD_80-100_v0b_10k_4.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0b/delphesCMS_QCD_80-100_v0b_10k_5.root,    qcd_MC,    630, 23, auto, 1, true
+QCD_80-100_v0b/delphesCMS_QCD_80-100_v0b_10k_6.root,    qcd_MC,    630, 23, auto, 1, true
 
 
 

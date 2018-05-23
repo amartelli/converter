@@ -62,6 +62,7 @@ private:
     int isB_;
     int isC_;
     int isUDSG_;
+    float nTrks_;
     int isMC_;
     int isTtbar_;
     float sigmad0times_;
